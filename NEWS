@@ -1,0 +1,16 @@
+Changes in Version 0.6
+======================
+* add option to annotate contour lines
+
+Changes in Version 0.5
+======================
+* fix bug in read_grid
+* use tempfile for temporary files, PyGMT should be safe now to run in
+  parallel
+* add log axes
+
+Changes in Version 0.4
+======================
+* we have a NEWS file
+* improved legend stuff
+* use libgmt for grid I/O

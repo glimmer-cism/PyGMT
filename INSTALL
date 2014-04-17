@@ -1,0 +1,20 @@
+1. Unpack the source tar ball, using tar
+   tar xvzf PyGMT-0.0.tar.gz
+
+2. Set the environment variable GMTINC to where the GMT header file 
+   gmt_grd.h is installed.
+
+3. Run the setup script:
+   ./setup.py install --home=DIR_WHERE_YOU_WANT_THE_STUFF_TO_GO
+	         
+   Use --home to specify a non-standard installation directory. If you do 
+   that, you will need to set the environment variable PYTHONPATH to point 
+   to this directory in order for python to find the module. Furthermore, 
+   the netCDFlibrary is required. setup.py looks for the header files in 
+   the standard locations, i.e. /usr/include and /usr/local/include.
+
+4. Run the example/test scripts in the test directory. By issuing commands like
+   python test_areaxy.py
+   These scripts should also give a first impression how PyGMT might work. 
+   Hopefully, I will get around to add some more documentation.
+

@@ -1,4 +1,5 @@
-PyGMT
-=====
+The Generic Mapping Tools (GMT) are a fantastic tools for generating maps. In particular, I do not know of any other scientific visualisation package which can handle geographic projections like GMT can. On the other hand, GMT is very unwieldy and not well suited for complex visualisation projects. Python is an object-oriented programming language which can be used to wrap the GMT programs to provide an object-oriented framework for GMT.
 
-yet another python wrapper for GMT and one that hasn't been moved in quite a while...
+This project is very much in its infancy and currently I am the only user (who can presumably live with various oddities). The wrappers only access a subset of the many arguments of GMT commands. It also should be noted, that I use Linux as my main (only) platform, so your milage might vary on other UNIXes and I am very sure that it will not work with Windows because of the way I pipe grids into the GMT commands. If you are interested give PyGMT a try. Contributions and suggestions are always welcome.
+
+PyGMT communicates with GMT commands using pipes and makes use of the latest Python features. Python 2.3 is, therefore, required. I use the Numeric Python extension for grid I/O, so you will need that for PyGMT to work. If your distribution has seperate development packages (for the header files, etc), you will also need to install that.

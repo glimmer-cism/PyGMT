@@ -1,0 +1,124 @@
+2009-03-10 Magnus Hagdorn
+ * setup.py: find numpy includes
+ * PyGMT/PyGMTarea.py: port to numpy
+ * PyGMT/PyGMTautoxy.py: ditto
+ * PyGMT/PyGMTgrid.py: ditto
+ * test/test_grid.py: ditto
+ * src/gmtiomodule.c: ditto, use libGMT to read header
+ * PyGMT/test/test_command.py: port to GMT 4
+ 
+2009-03-06 Magnus Hagdorn
+ * PyGMT/PyGMTarea.py: fix bugs
+ * test/test_areageo.py: port to GMT 4
+ * test/test_areaxy.py: ditto
+
+2005-12-19 Magnus Hagdorn
+ * setup.py: bump version to 0.6
+ * NEWS: update
+
+2005-12-09 Magnus Hagdorn
+ * PyGMTarea.py: add annotation control to contours
+ * PyGMTautoxy.py: get rid of some white space
+
+2005-10-31 Magnus Hagdorn
+ * PyGMTautoxy.py: handle nans
+
+2005-10-08 Magnus Hagdorn
+ * setup.py: use environment variable GMTHOME to point to where gmt
+   is installed, bump version number
+ * NEWS: update
+
+2005-10-08 Kurt Schwehr
+* PyGMTgrid.py: improve doc string of read_gmt
+
+2005-10-08 Magnus Hagdorn
+ * PyGMTcanvas.py: fixed bug when removing .gmt*
+
+2005-10-07 Magnus Hagdorn
+ * PyGMTgrid.py: fixed bug
+ * gmtiomodule.c: gmtio_read: can read from stream or from a file 
+   
+2005-10-06 Magnus Hagdorn
+ * PyGMTarea.py: use tempfile for temporary files, add log axes
+ * PyGMTautoxy.py: add log axes
+ * PyGMTgrid.py: use tempfile for temporary files
+
+2005-10-06 Magnus Hagdorn
+ * setup.py: bump version number, print path to includes..
+ * MANIFEST.in: add some extra files to source tar-ball
+ * MANIFEST: removed, generate from MANIFEST.in
+ * added NEWS file
+
+2005-10-03 Magnus Hagdorn
+ * setup.py: new function for finding libraries, 
+   look for GMT library
+
+2005-10-03 Kurt Schwehr
+ * gmtiomodule.c: use libgmt for grid I/O
+
+2005-07-07 Magnus Hagdorn
+ * PyGMTlegend.py: fixed minor bug
+
+2005-07-04 Magnus Hagdorn
+ * PyGMTlegend.py: add symbols to legend
+
+2005-03-12 Magnus Hagdorn
+ * setup.py: bump version to 0.3
+ * PyGMTarea.py: fix bug with labels
+
+2005-02-15 Magnus Hagdorn
+ * PyGMTautoxy.py: fix bug in contour method
+
+2004-12-13 Magnus Hagdorn
+ * PyGMTarea.py: fixed minor problem with axis labeling
+
+2004-12-01 Magnus Hagdorn
+ * PyGMTcommand.py: added some debugging stuff. I get random crashes, there seems to 
+   be something wrong with the pipes, etc. no idea. will see
+ * PyGMTgrid.py: grdtrack modifies the xy pairs. so we need to specify a tolerance when
+   we read the values
+
+2004-11-29 Magnus Hagdorn
+ * PyGMTautoxy.py: improved auto-range code
+   it's doing now what it should do
+
+2004-11-29 Magnus Hagdorn
+ * PyGMTarea.py: fixed bug with basemap plotting
+ * PyGMTautoxy.py: improved auto-plotting range code
+   this could still do with some improvements
+
+2004-11-23 Magnus Hagdorn
+ * PyGMTarea.py: line plots can deal with NaN now
+ * PyGMTautoxy.py: line, point, symbol plots can deal with NaN now
+ * PyGMTgrid.py: grdtrack produces NaN when track is outside region
+
+2004-10-22 Magnus Hagdorn
+ * PyGMTarea.py: added new type of scatter plot with error bars
+ * PyGMTautoxy.py: added point plots
+	
+2004-08-26 Magnus Hagdorn
+ * PyGMTgrid.py: added function to triangulate set of xyz points and return a grid
+ * PyGMTautoxy.py: rewrote AutoXY, can now also handle images and contours
+
+2004-08-08 Magnus Hagdorn
+ * PyGMTarea.py: applied Lionel Roubeyrie's patch fixing a problem with the
+   basemap string
+
+2004-08-08 Magnus Hagdorn
+ * PyGMTarea.py: fixed a bug where the base class was not derived from object
+   and some things did not work as expected
+ * PyGMTautoxy.py: plotting area can be automatically expanded to some nice value
+ 
+2004-07-01 Magnus Hagdorn
+ * added step plotting (PyGMTarea.py, PyGMTautoxy.py)
+	
+2004-06-13 Magnus Hagdorn
+ * PyGMTgrid.py: fixed small bug where read function was not exported
+
+2004-06-10 Magnus Hagdorn
+ * added method to project grid (PyGMTgrid.py)
+ * fixed small bug in PyGMTlegend.py
+
+2004-04-18 Magnus Hagdorn
+  * added GPL licence and copyright notices to all files
+  * improved README and INSTALL file
